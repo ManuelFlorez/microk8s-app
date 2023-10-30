@@ -78,3 +78,10 @@ clusterrolebinding.rbac.authorization.k8s.io/microk8s-hostpath created
 Storage will be available soon.
 ```
 
+## Habilitar el complemento de Ingress
+
+Se debe habilitar el complemento de ingres de la siguiente manera:
+
+```bash
+$ microk8s enable ingress
+```

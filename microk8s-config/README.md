@@ -15,7 +15,7 @@ La información descrita a continuación relaciona solo la configuración usada 
 
 ```bash
 $ sudo snap install microk8s --clasic
-Se ha instalado microk8s (1.27/stable) v1.27.6 por canonical
+Se ha instalado microk8s (1.27/stable) v1.27.6 por canonical ✓
 ```
 
 ## Unirce al grupo

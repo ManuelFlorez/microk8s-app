@@ -52,7 +52,29 @@ Por ejemplo, para ver su nodo:
 ```bash
 $ kubectl get nodes
 ```
+
 Para ver los servicios:
 ```bash
 $ kubectl get services
 ```
+
+## Usar complementos
+
+MicroK8s utiliza el mínimo de componentes para un Kubernetes puro y liviano. Sin embargo, hay muchas funciones adicionales disponibles con solo presionar unas pocas teclas usando "complementos": componentes preempaquetados que brindarán capacidades adicionales para su Kubernetes, desde la simple administración de DNS hasta el aprendizaje automático con Kubeflow.
+
+Para empezar se recomienda agregar gestión de DNS para facilitar la comunicación entre servicios. Para aplicaciones que necesitan almacenamiento, el complemento 'hostpath-storage' proporciona espacio de directorio en el host. Estos son fáciles de configurar:
+
+```bash
+$ microk8s enable dns
+$ microk8s enable hostpath-storage
+```
+
+``` bash
+deployment.apps/hostpath-provisioner created
+storageclass.storage.k8s.io/microk8s-hostpath created
+serviceaccount/microk8s-hostpath created
+clusterrole.rbac.authorization.k8s.io/microk8s-hostpath created
+clusterrolebinding.rbac.authorization.k8s.io/microk8s-hostpath created
+Storage will be available soon.
+```
+
